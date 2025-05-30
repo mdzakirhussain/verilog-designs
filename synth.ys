@@ -1,0 +1,29 @@
+# Read the Verilog design
+read_verilog counter4bit_updown.v
+
+# Read the technology library for mapping
+read_liberty -lib /home/codespace/IHP-Open-PDK/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+
+# Set the top module name
+hierarchy -top up_down_counter
+
+# Synthesize for the target library
+synth -top up_down_counter
+
+# Flatten the design before mapping
+flatten
+
+# Map to standard cells
+dfflibmap -liberty /home/codespace/IHP-Open-PDK/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+abc -liberty /home/codespace/IHP-Open-PDK/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+
+# Read the Liberty file again to provide cell blackboxes for STA
+read_liberty /home/codespace/IHP-Open-PDK/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+
+# Run static timing analysis
+sta
+
+clean
+
+# Write synthesized netlist
+write_verilog -noattr synth_out.v
