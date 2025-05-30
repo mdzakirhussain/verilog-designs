@@ -1,0 +1,14 @@
+# vsim -c ha_tb 
+# Start time: 03:03:21 on May 30,2025
+# Loading work.ha_tb
+# Loading work.ha
+# A B | SUM CARRY
+# --------------
+# 0 0 |  0    0
+# 0 1 |  1    0
+# 1 0 |  1    0
+# 1 1 |  0    1
+# ** Note: $finish    : tb_ha.v(27)
+#    Time: 40 ps  Iteration: 0  Instance: /ha_tb
+# End time: 03:03:37 on May 30,2025, Elapsed time: 0:00:16
+# Errors: 0, Warnings: 0

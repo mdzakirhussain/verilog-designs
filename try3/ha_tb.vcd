@@ -1,0 +1,47 @@
+$date
+	Fri May 30 03:03:37 2025
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module ha_tb $end
+$var reg 1 ! a $end
+$var reg 1 " b $end
+$var wire 1 # sum $end
+$var wire 1 $ carry $end
+
+$scope module uut $end
+$var wire 1 % a $end
+$var wire 1 & b $end
+$var wire 1 # sum $end
+$var wire 1 $ carry $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0&
+0%
+$end
+#10
+1"
+1&
+1#
+#20
+1!
+0"
+1%
+0&
+#30
+1"
+1&
+0#
+1$
